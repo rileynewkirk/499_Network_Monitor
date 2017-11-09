@@ -1,0 +1,93 @@
+﻿@model IEnumerable<BSUNetworkMonitorWebpage.Models.Monitor>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MacAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IPAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Switch)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Port)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExternalIP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DNS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WirelessController)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AccessPoint)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DescriptionForWired)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MacAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IPAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Switch)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Port)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExternalIP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DNS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WirelessController)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AccessPoint)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DescriptionForWired)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
