@@ -26,8 +26,7 @@
             <a class="nav-link" href="#">Link</a>
           </li>
             </div>
-      <input class="form-control mr-sm-2" type="text" placeholder="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    
       
         </ul>
         
@@ -54,7 +53,7 @@
                 <i class="fa fa-search" aria-hidden="true"></i>
                 <strong>Get your search start from here.  </strong></p>
             <p class="title">
-                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                <asp:TextBox ID="TextBox1" runat="server"  style="height:50px; width:600px;"></asp:TextBox>
             </p>
           </div>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -66,7 +65,9 @@
                 <br />
 
                 <br />
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="SqlDataSource1">
+
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="SqlDataSource1" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
+                    <AlternatingRowStyle BackColor="White" />
                     <Columns>
                         <asp:BoundField DataField="ID" HeaderText="ID" ReadOnly="True" SortExpression="ID" />
                         <asp:BoundField DataField="MacAddress" HeaderText="MacAddress" SortExpression="MacAddress" />
@@ -81,6 +82,15 @@
                         <asp:BoundField DataField="AccessPoint" HeaderText="AccessPoint" SortExpression="AccessPoint" />
                         <asp:BoundField DataField="DescriptionForWired" HeaderText="DescriptionForWired" SortExpression="DescriptionForWired" />
                     </Columns>
+                    <FooterStyle BackColor="#CCCC99" />
+                    <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+                    <RowStyle BackColor="#F7F7DE" />
+                    <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+                    <SortedAscendingCellStyle BackColor="#FBFBF2" />
+                    <SortedAscendingHeaderStyle BackColor="#848384" />
+                    <SortedDescendingCellStyle BackColor="#EAEAD3" />
+                    <SortedDescendingHeaderStyle BackColor="#575357" />
                 </asp:GridView>
                 <br />
                 <br />
