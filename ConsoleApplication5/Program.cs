@@ -16,7 +16,7 @@ namespace ConsoleApplication5
             StreamReader sr = new StreamReader(path);
             string line;
             int count = 0;
-            SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=NetworkTrafficData;Integrated Security=True;Connect Timeout=1000;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+            SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=NetworkTrafficData;Integrated Security=True;Connect Timeout=10000;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
 
 
             while ((line = sr.ReadLine()) != null)
